@@ -1,6 +1,208 @@
+.top_head {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(248, 243, 244);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.top_head .top-head__heading {
+  color: rgb(241, 109, 127);
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.top_head .breadcrumps .breadcrumps_link {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(99, 99, 99);
+}
+.top_head .breadcrumps .main_breadcrumps_link {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(241, 109, 127);
+}
+
+.catalog_of_products .filter_and_setting_sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 320px;
+  margin-top: 51px;
+  margin-bottom: 65px;
+  position: relative;
+}
+.catalog_of_products .filter_and_setting_sort .filter {
+  color: rgb(0, 0, 0);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.catalog_of_products .filter_and_setting_sort .filter .icon_filter {
+  margin-left: 11px;
+}
+.catalog_of_products .filter_and_setting_sort .filter_menu {
+  background: rgb(255, 255, 255);
+  box-shadow: 5px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  width: 360px;
+  display: none;
+  padding-left: 16px;
+  padding-top: 13px;
+  padding-bottom: 16px;
+}
+.catalog_of_products .filter_and_setting_sort .filter_menu .button_filter_menu {
+  color: rgb(111, 110, 110);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-align: left;
+  border: none;
+  border-left: solid 5px rgb(241, 109, 127);
+  border-bottom: 1px solid rgb(235, 235, 235);
+  background: none;
+  padding-left: 11px;
+  cursor: pointer;
+}
+.catalog_of_products .filter_and_setting_sort .filter_menu .category_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+}
+.catalog_of_products .filter_and_setting_sort .filter_menu .category_menu .category_menu_link {
+  color: rgb(111, 110, 110);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.catalog_of_products .filter_and_setting_sort .buttons_setting {
+  display: flex;
+  gap: 28px;
+  position: relative;
+}
+.catalog_of_products .filter_and_setting_sort .buttons_setting .checkbox_sizes {
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 79px;
+  height: 103px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 50px;
+  display: none;
+}
+.catalog_of_products .filter_and_setting_sort .buttons_setting .checkbox_sizes .checkbox_size {
+  border: 1px solid rgb(235, 235, 235);
+}
+.catalog_of_products .filter_and_setting_sort .buttons_setting .checkbox_sizes .label_for_checkbox_sizes {
+  color: rgb(111, 110, 110);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.catalog_of_products .filter_and_setting_sort .buttons_setting .button_setting {
+  color: rgb(111, 110, 110);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.catalog_of_products .filter_and_setting_sort .buttons_setting .button_setting .icon_sort {
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+.catalog_of_products .products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.catalog_of_products .products .products_card {
+  background: rgb(243, 238, 239);
+  text-decoration: none;
+  transition: 0.2s;
+  position: relative;
+}
+.catalog_of_products .products .text_in_card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.catalog_of_products .products .text_in_card .title_products_card {
+  color: rgb(0, 0, 0);
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.catalog_of_products .products .text_in_card .description {
+  color: rgb(93, 93, 93);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.catalog_of_products .products .text_in_card .price {
+  color: rgb(241, 109, 127);
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 .center {
@@ -52,6 +254,7 @@ img {
   position: absolute;
   display: none;
   transition-duration: all 0.3s;
+  z-index: 1;
 }
 .navigation_desk .right_link .title_pop_up_window {
   color: rgb(0, 0, 0);
@@ -110,7 +313,7 @@ img {
   padding-left: 64px;
 }
 .title .main_title {
-  border-left: 12px solid #f16d7f;
+  border-left: 12px solid rgb(241, 109, 127);
   padding-left: 16px;
   margin-top: 48%;
 }
@@ -235,7 +438,7 @@ img {
   padding: 15px 39px;
   margin: 0 auto;
   display: block;
-  color: rgb(242, 99, 118);
+  color: rgb(241, 109, 127);
   font-family: Lato;
   font-size: 16px;
   font-weight: 400;
@@ -243,7 +446,7 @@ img {
   letter-spacing: 0%;
   text-align: left;
   background: none;
-  border: 1px solid rgb(255, 106, 106);
+  border: 1px solid rgb(241, 109, 127);
   margin-top: 48px;
   margin-bottom: 60px;
   cursor: pointer;
@@ -373,7 +576,7 @@ img {
 .reviews .review_level .email_input_button {
   height: 49px;
   width: 100px;
-  background: rgb(224, 92, 110);
+  background: rgb(241, 109, 127);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   border: none;

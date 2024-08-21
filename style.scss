@@ -1,7 +1,9 @@
 @import "vars";
+@import "styleCatalog";
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 .center {
   padding-left: calc(50% - 570px);
@@ -48,6 +50,7 @@ img {
       position: absolute;
       display: none;
       transition-duration: all 0.3s;
+      z-index: 1;
     }
     .title_pop_up_window {
       color: rgb(0, 0, 0);
@@ -68,7 +71,7 @@ img {
       padding-top: 11px;
     }
     .title_menu_pop-up {
-      color: rgb(241, 109, 127);
+      color: $selectColor;
       font-family: Lato;
       font-size: 14px;
       font-weight: 400;
@@ -106,7 +109,7 @@ img {
     padding-left: 64px;
   }
   .main_title {
-    border-left: 12px solid #f16d7f;
+    border-left: 12px solid $selectColor;
     padding-left: 16px;
     margin-top: 48%;
     .the_brand {
@@ -134,7 +137,7 @@ img {
         font-weight: 700;
         letter-spacing: 0%;
         text-align: left;
-        color: rgb(241, 109, 127);
+        color: $selectColor;
       }
     }
   }
@@ -231,7 +234,7 @@ img {
     padding: 15px 39px;
     margin: 0 auto;
     display: block;
-    color: rgb(242, 99, 118);
+    color: $selectColor;
     font-family: Lato;
     font-size: 16px;
     font-weight: 400;
@@ -239,7 +242,7 @@ img {
     letter-spacing: 0%;
     text-align: left;
     background: none;
-    border: 1px solid rgb(255, 106, 106);
+    border: 1px solid $selectColor;
     margin-top: 48px;
     margin-bottom: 60px;
     cursor: pointer;
@@ -364,7 +367,7 @@ img {
     .email_input_button {
       height: 49px;
       width: 100px;
-      background: rgb(224, 92, 110);
+      background: $selectColor;
       border-top-right-radius: 30px;
       border-bottom-right-radius: 30px;
       border: none;
