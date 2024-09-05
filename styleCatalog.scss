@@ -205,4 +205,42 @@
       gap: 16px;
     }
   }
+  .slider_container {
+    display: flex;
+    justify-content: center;
+    .slider {
+      display: flex;
+      gap: 18px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid rgb(235, 235, 235);
+      padding: 12px 15px;
+      width: 202px;
+      height: 19px;
+      margin-top: 48px;
+      margin-bottom: 96px;
+      .slider_button {
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
+      .slider_links {
+        display: flex;
+        gap: 15px;
+        .slider_link:first-of-type {
+          color: $selectColor;
+        }
+        .slider_link {
+          font-family: Lato;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 19px;
+          letter-spacing: 0%;
+          text-align: left;
+          color: rgb(196, 196, 196);
+        }
+      }
+    }
+  }
 }
