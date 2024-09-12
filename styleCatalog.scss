@@ -39,207 +39,221 @@
 
 .catalog_of_products {
   .filter_and_setting_sort {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 320px;
-    margin-top: 51px;
-    margin-bottom: 65px;
+    height: 132px;
     position: relative;
+    display: flex;
+    padding-top: 39px;
+    gap: 30px;
+    box-sizing: border-box;
 
     .filter {
-      color: rgb(0, 0, 0);
-      font-family: Lato;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 17px;
-      letter-spacing: 0%;
-      text-align: left;
-      border: none;
-      background: none;
-      cursor: pointer;
-      .icon_filter {
-        margin-left: 11px;
-      }
-    }
-    .filter_menu {
-      background: rgb(255, 255, 255);
-      box-shadow: 5px 0px 5px 5px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 24px;
-      position: absolute;
-      z-index: 1;
-      top: 20px;
-      width: 360px;
-      display: none;
-      padding-left: 16px;
+      box-sizing: border-box;
       padding-top: 13px;
-      padding-bottom: 16px;
-      .button_filter_menu {
+      width: 360px;
+      position: relative;
+      z-index: 10;
+      &[open] {
+        background: rgb(255, 255, 255);
+        box-shadow: 5px 0px 5px 5px rgba(0, 0, 0, 0.1);
+      }
+      &[open] .filter__heading {
+        color: $selectColor;
+      }
+      &[open] path {
+        fill: $selectColor;
+      }
+
+      &__summary {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding-left: 16px;
+      }
+
+      &__heading {
+        color: rgb(0, 0, 0);
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+      }
+      &__content {
+        background-color: #fff;
+        padding-top: 0;
+        padding-right: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+      }
+      &__item {
+        margin-top: 16px;
+      }
+      &__head {
         color: rgb(111, 110, 110);
         font-family: Lato;
         font-size: 14px;
         font-weight: 400;
         line-height: 17px;
-        letter-spacing: 0%;
-        text-align: left;
-        border: none;
-        border-left: solid 5px $selectColor;
+        padding: 8px 11px 11px;
+        margin-bottom: 24px;
+        border-left: 5px solid $selectColor;
         border-bottom: 1px solid rgb(235, 235, 235);
-        background: none;
-        padding-left: 11px;
-        cursor: pointer;
       }
+      &__item[open] .filter__head {
+        color: $selectColor;
+      }
+
       .category_menu {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 11px;
-
+        padding: 24px 16px;
         .category_menu_link {
           color: rgb(111, 110, 110);
           font-family: Lato;
           font-size: 14px;
           font-weight: 400;
           line-height: 17px;
-          letter-spacing: 0%;
-          text-align: left;
+        }
+        .category_menu_link:hover {
+          color: $selectColor;
         }
       }
     }
-    .buttons_setting {
+    .sort {
       display: flex;
       gap: 28px;
-      position: relative;
-      .checkbox_sizes {
-        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
-        background: rgb(255, 255, 255);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-        width: 79px;
-        height: 103px;
-        padding: 10px;
-        position: absolute;
-        z-index: 1;
-        top: 20px;
-        right: 50px;
-        display: none;
-        .checkbox_size {
-          border: 1px solid rgb(235, 235, 235);
-        }
-        .label_for_checkbox_sizes {
-          color: rgb(111, 110, 110);
-          font-family: Roboto;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 16px;
-          letter-spacing: 0%;
-          text-align: left;
-        }
+      padding-top: 12px;
+      &__details {
+        position: relative;
       }
-      .button_setting {
+      &__summary {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      &__check {
+        display: flex;
+        gap: 9px;
+        align-items: center;
+        color: rgb(111, 110, 110);
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+      }
+      &__heading {
         color: rgb(111, 110, 110);
         font-family: Lato;
         font-size: 14px;
         font-weight: 400;
         line-height: 17px;
-        letter-spacing: 0%;
-        text-align: left;
-        border: none;
-        background: none;
-        cursor: pointer;
-        .icon_sort {
-          margin-left: 10px;
-          margin-bottom: 3px;
-        }
+      }
+      &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        background: rgb(255, 255, 255);
+        padding: 7px 30px 11px 9px;
+        position: absolute;
+        z-index: 1;
+        top: 20px;
       }
     }
   }
-  .products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    .products_card {
-      background: rgb(243, 238, 239);
-      text-decoration: none;
-      transition: 0.2s;
-      position: relative;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  .products_card {
+    background: rgb(243, 238, 239);
+    text-decoration: none;
+    transition: 0.2s;
+    position: relative;
+  }
+  .products_card::after {
+    content: url(images/Hover.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    display: none;
+  }
+  .products_card:hover::after {
+    display: block;
+  }
+  .text_in_card {
+    .title_products_card {
+      color: rgb(0, 0, 0);
+      font-family: Lato;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0%;
+      text-align: left;
     }
-    .text_in_card {
-      .title_products_card {
-        color: rgb(0, 0, 0);
-        font-family: Lato;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 16px;
-        letter-spacing: 0%;
-        text-align: left;
+    .description {
+      color: rgb(93, 93, 93);
+      font-family: Lato;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 17px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+    .price {
+      color: rgb(241, 109, 127);
+      font-family: Lato;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+.slider_container {
+  display: flex;
+  justify-content: center;
+  .slider {
+    display: flex;
+    gap: 18px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(235, 235, 235);
+    padding: 12px 15px;
+    width: 202px;
+    height: 19px;
+    margin-top: 48px;
+    margin-bottom: 96px;
+    .slider_button {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+    .slider_links {
+      display: flex;
+      gap: 15px;
+      .slider_link:first-of-type {
+        color: $selectColor;
       }
-      .description {
-        color: rgb(93, 93, 93);
-        font-family: Lato;
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 17px;
-        letter-spacing: 0%;
-        text-align: left;
-      }
-      .price {
-        color: rgb(241, 109, 127);
+      .slider_link {
         font-family: Lato;
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 19px;
         letter-spacing: 0%;
         text-align: left;
-      }
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
-    }
-  }
-  .slider_container {
-    display: flex;
-    justify-content: center;
-    .slider {
-      display: flex;
-      gap: 18px;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid rgb(235, 235, 235);
-      padding: 12px 15px;
-      width: 202px;
-      height: 19px;
-      margin-top: 48px;
-      margin-bottom: 96px;
-      .slider_button {
-        border: none;
-        background: none;
-        cursor: pointer;
-      }
-      .slider_links {
-        display: flex;
-        gap: 15px;
-        .slider_link:first-of-type {
-          color: $selectColor;
-        }
-        .slider_link {
-          font-family: Lato;
-          font-size: 16px;
-          font-weight: 300;
-          line-height: 19px;
-          letter-spacing: 0%;
-          text-align: left;
-          color: rgb(196, 196, 196);
-        }
+        color: rgb(196, 196, 196);
       }
     }
   }
