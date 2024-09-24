@@ -1,5 +1,10 @@
 @import "vars";
 .registaration {
+  display: flex;
+  gap: 128px;
+  margin-top: 64px;
+  margin-bottom: 96px;
+  flex-wrap: wrap;
   &__form_box {
     display: flex;
     flex-direction: column;
@@ -23,7 +28,7 @@
     padding-bottom: 13px;
   }
   &__input {
-    max-width: 360px;
+    width: 360px;
     height: 45px;
     box-sizing: border-box;
     padding-left: 17px;
@@ -65,6 +70,7 @@
     display: flex;
     gap: 20px;
     align-items: center;
+    cursor: pointer;
   }
   .label_for_radio {
     color: rgb(0, 0, 0);
@@ -76,6 +82,50 @@
     text-align: left;
     &2 {
       margin-right: 10px;
+    }
+  }
+  .registration__info {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    &__heading {
+      color: rgb(0, 0, 0);
+      font-family: Lato;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 29px;
+      letter-spacing: 0%;
+    }
+    &__about {
+      color: rgb(0, 0, 0);
+      font-family: Lato;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 29px;
+      letter-spacing: 0%;
+      max-width: 652px;
+    }
+    .registaration__info__list {
+      list-style: none;
+      .registration__info__list__li {
+        padding-left: 33px;
+        position: relative;
+        margin: 16px;
+        color: rgb(0, 0, 0);
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 29px;
+        letter-spacing: 0%;
+        text-align: left;
+        &::before {
+          content: "✔";
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: rgb(0, 0, 0);
+        }
+      }
     }
   }
 }

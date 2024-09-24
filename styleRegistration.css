@@ -1,3 +1,11 @@
+@charset "UTF-8";
+.registaration {
+  display: flex;
+  gap: 128px;
+  margin-top: 64px;
+  margin-bottom: 96px;
+  flex-wrap: wrap;
+}
 .registaration__form_box {
   display: flex;
   flex-direction: column;
@@ -21,7 +29,7 @@
   padding-bottom: 13px;
 }
 .registaration__input {
-  max-width: 360px;
+  width: 360px;
   height: 45px;
   box-sizing: border-box;
   padding-left: 17px;
@@ -71,6 +79,7 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  cursor: pointer;
 }
 .registaration .label_for_radio {
   color: rgb(0, 0, 0);
@@ -83,4 +92,48 @@
 }
 .registaration .label_for_radio2 {
   margin-right: 10px;
-}/*# sourceMappingURL=styleCart.css.map */
+}
+.registaration .registration__info {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.registaration .registration__info__heading {
+  color: rgb(0, 0, 0);
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  letter-spacing: 0%;
+}
+.registaration .registration__info__about {
+  color: rgb(0, 0, 0);
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  letter-spacing: 0%;
+  max-width: 652px;
+}
+.registaration .registration__info .registaration__info__list {
+  list-style: none;
+}
+.registaration .registration__info .registaration__info__list .registration__info__list__li {
+  padding-left: 33px;
+  position: relative;
+  margin: 16px;
+  color: rgb(0, 0, 0);
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.registaration .registration__info .registaration__info__list .registration__info__list__li::before {
+  content: "✔";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgb(0, 0, 0);
+}/*# sourceMappingURL=styleRegistration.css.map */
