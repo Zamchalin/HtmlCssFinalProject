@@ -264,6 +264,10 @@ img {
     margin-top: 48px;
     margin-bottom: 60px;
     cursor: pointer;
+    &:hover {
+      background-color: $selectColor;
+      color: rgb(255, 255, 255);
+    }
   }
 }
 
