@@ -490,7 +490,6 @@
   gap: 128px;
   margin-top: 64px;
   margin-bottom: 96px;
-  flex-wrap: wrap;
 }
 .registaration__form_box {
   display: flex;
@@ -624,6 +623,54 @@
   color: rgb(0, 0, 0);
 }
 
+@media (max-width: 1024px) {
+  .registaration {
+    display: flex;
+    gap: 22px;
+    margin-top: 40px;
+    margin-bottom: 96px;
+  }
+  .registaration .registration__info {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .registaration .registration__info__heading {
+    color: rgb(0, 0, 0);
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+  }
+  .registaration .registration__info__about {
+    color: rgb(0, 0, 0);
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0%;
+  }
+  .registaration .registration__info .registaration__info__list .registration__info__list__li {
+    padding-left: 33px;
+    position: relative;
+    margin: 16px;
+    color: rgb(0, 0, 0);
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0%;
+  }
+}
+@media (max-width: 450px) {
+  .registaration {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    flex-direction: column;
+  }
+}
 .cart {
   display: flex;
   margin-top: 96px;
