@@ -285,7 +285,7 @@
     display: none;
   }
   .catalog_of_products .filter_and_setting_sort .filter__content {
-    position: fixed;
+    position: absolute;
   }
   .catalog_of_products .filter_and_setting_sort .sort {
     gap: 24px;
